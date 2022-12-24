@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css?family=Dekko|Lato:900|Rock+Salt");
+@font-face {
+    font-family: Optima-ExtraBlack;
+    src: url("Optima-ExtraBlack.otf") format("opentype");
+}
+* {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: black;
+}
+body,html {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(0)" opacity="0.2" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+    #c52754;
+    background-size: 30px, 100%; /* Size of dots in background */
+}
+
+/*-----------------*/
+
+h1, h2, h3, h4, h5 {font-family: 'Optima-ExtraBlack'; color: black};
+
+.color1{color:#ffcd28}
+.color2{color:#c52754}
+.blue {
+  color: rgb(1, 125, 199);
+  font-family: Optima-ExtraBlack;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+.red {
+  color: rgb(236, 27, 48);
+  font-family: Optima-ExtraBlack;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* PAGE FLIP ANIMATION */
+.book-container {
+  color: #013243;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 400px;
+  background: white; /* controls page color */
+  transform-style: preserve-3d;
+  transform: translate(-50%,-50%) perspective(2000px);
+  box-shadow: inset 200px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+  transition: 1s;
+}
+.book-container:hover {
+  transform: translate(-50%,-50%) perspective(2000px) scale(1.4);
+  box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+}
+.book-container:before { /* Initial book transition */
+  content:'';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #BAC1BA; /* Top book border effect */
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+.book-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: #92A29C; /* Right book border effect */
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+.book-container #cover {
+  
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: .7s;
+}
+.book-container .effect {
+  position: absolute;
+  background: #edeeeb; /* controls page color */
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .7s;
+}
+.book-container #cover img {
+  min-width: 250px;
+  max-height: 400px;
+}
+.book-container:hover #cover {transform: rotateY(-135deg)}
+.book-container:hover .effect {
+  opacity: 1;
+  transition: .6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+}
+.book-container #contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  /* padding: 0 0 0 10px; */
+  z-index: -1;
+}
+
+/* CONTENTS PAGE */
+#contents {
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  text-align: center;
+  height: 100%;
+  padding: 20px;
+}
+#header {
+  align-self: center;
+  justify-self: center;
+  background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(25)" opacity="0.3" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
+  #fff;
+  background-size: 4px, 100%;
+  border: 1px solid #000;
+  border-bottom: 2px solid rgb(1, 125, 199);
+  font-family: Optima-ExtraBlack;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#contents > form {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr) 40px;
+}
+#contents > form > label {
+  font-family: Dekko;
+  font-weight: 400;
+  font-size: 24px;
+}
+.start-btn {
+  font-family: Optima-ExtraBlack;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: #c52754;
+  background-color: #ffcd28;
+  cursor: pointer;
+  border: 2px solid black;
+  box-shadow: 3px 5px;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.start-btn:hover {
+  box-shadow: none;
+  border: 2px solid black;
+}
+
+
+/* FOOTER */
+#footer {
+    display: grid;
+    background-color: #f7c44e;
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    align-content: center;
+    width: 100%;
+    z-index: -1;
+    /* Fix footer to bottom of page */
+    position:fixed;
+    bottom: 0;
+}
+#github-logo, #linked-logo {
+    width: 1.0em;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: transform 1.07s;
+}
+#github-logo:hover {transform: rotate(360deg) scale(2)}
+#linked-logo:hover {color: #0072b1}
+
+@media (min-width: 0px) and (max-width: 370px) {#footer {font-size: 0.7em; height: 28px}}
+@media (min-width: 370px) and (max-width: 615px) {#footer {font-size: 0.8em; height: 34px}}
+@media (min-width: 615px) and (max-width: 770px) {#footer {font-size: 0.9em; height: 37px}}
+@media (min-width: 770px) and (max-width: 1500px) {#footer {font-size: 1em; height: 42px}}
+@media (min-width: 1500px) and (max-width: 8000px) {#footer {font-size: 1.2em; height: 54px}}
+
+
+
+
