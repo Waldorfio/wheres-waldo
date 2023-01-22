@@ -8,12 +8,16 @@ A full-stack application that allows users to play the classic game of "Where's 
 - Search for Wally in multiple images of scaling difficulty
 - Keep track of the number of times Wally has been found
 - Leaderboard of the top Wally hunters
+- Fully responsive design for optimal user experience on all devices
 
 #### Goals
-- 
+- Create a fully responsive application that works well on all devices
+- Implement user authentication and authorization
+- Create a leaderboard feature to track high scores
 
 #### Challenges Faced
-- 
+- Creating a fully responsive design that works well on all devices was a challenge as I had to ensure that the layout and functionality are consistent across different screen sizes and resolutions.
+- Implementing user authentication and authorization was challenging due to the complexity of the processes and the need to ensure the security of the data.
 
 ## Local Installation
 1.	Clone the repository `git clone https://github.com/Waldorfio/wheres-wally.git`
