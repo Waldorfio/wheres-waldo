@@ -16,7 +16,7 @@ A full-stack application that allows users to play the classic game of "Where's 
 - 
 
 ## Local Installation
-1.	Clone the repository `git clone https://github.com/YOUR_USERNAME/wheres-waldo-webapp.git`
+1.	Clone the repository `git clone https://github.com/Waldorfio/wheres-wally.git`
 2.	Install the dependencies `npm install`
 3.	Start the web server using `npm start`
 4.	Open the application in your browser at `http://localhost:3000`
