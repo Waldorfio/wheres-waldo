@@ -5,9 +5,9 @@ A full-stack application that allows users to play the classic game of "Where's 
 
 ### Features
 - User authentication
-- Search for Waldo in multiple images
-- Keep track of the number of times Waldo has been found
-- Leaderboard of the top Waldo hunters
+- Search for Wally in multiple images of scaling difficulty
+- Keep track of the number of times Wally has been found
+- Leaderboard of the top Wally hunters
 
 #### Goals
 - 
