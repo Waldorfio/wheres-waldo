@@ -1,41 +1,31 @@
-# Where's Waldo: a recreation of the classic game
-A fully responsive full-stack where's waldo/wally game, with a built in leaderboard. 
+# Where's Wally: a recreation of the classic game
+A full-stack application that allows users to play the classic game of "Where's Wally" in a digital format.
 
-Built using React, TypeScript, NodeJS, Express and MongoDB.
 ## [Live Link 👈]()
 
 ### Features
-- Browse through a fully responsive e-commerce shop
-- Add your favorite steam games to a stateful shopping cart
+- User authentication
+- Search for Waldo in multiple images
+- Keep track of the number of times Waldo has been found
+- Leaderboard of the top Waldo hunters
 
-### Goals
-- Practice linking together a React front-end with an Express/MongoDB back-end
-- Create a fully-responsive and stateful React based front-end
-- Manage strict typing with TypeScript
-
-### Challenges Faced
+#### Goals
 - 
 
-## How to run the app
-### 1. Click the [hosted link]()
-
-OR
-
-### 2. Host it locally
-1.	Either fork or download the app and open the folder in the cli
-2.	Install all dependencies using the `npm i` command
-3.	Start the web server using the `npm run local` command. The app will be served at http://localhost:8080/
-4.	Go to  http://localhost:8080/ in your browser, and start the app!
-
-## How to use the app
-1. Open up the game
-2. ... Play the game!
-
-## Future Features
+#### Challenges Faced
 - 
-## Dependencies
-- React
-- React Router
-- React Testing Library
-- Jest
-- TypeScript
+
+## Local Installation
+1.	Clone the repository `git clone https://github.com/YOUR_USERNAME/wheres-waldo-webapp.git`
+2.	Install the dependencies `npm install`
+3.	Start the web server using `npm start`
+4.	Open the application in your browser at `http://localhost:3000`
+
+## Technologies Used
+- React with TypesScript for the front-end
+- Node.js and Express.js for the back-end
+- MongoDB for the database
+- Webpack for building and bundling the application
+
+## Disclaimer
+This is a fictional application and not affiliated with the Where's Waldo or Where's Wally franchise.
