@@ -1,4 +1,4 @@
-# Where's Wally: a recreation of the classic game
+# Where's Wally
 A full-stack application that allows users to play the classic game of "Where's Wally" in a digital format.
 
 ## [Live Link 👈]()
